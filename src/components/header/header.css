@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
-    align-items: last baseline;
+    align-items: center;
     justify-content: space-between;
     background-color: #E1EBDF;
     border: solid #58D43F  1px;
@@ -36,13 +36,24 @@
    
 }
 .icons_container .icons{
-    font-size:1.5rem;
+    font-size:1.7rem;
     color:#22B94C;
 }
 .icons_container .bars{
     display: none;
 }
-@media (max-width:425px) {
+.icons_container .icons:hover{
+    background-color: #008000;
+    color: white;
+    border-radius: .2rem;
+    padding: 0.1rem;
+    font-size: 1.25rem;
+}
+
+.icons_container .profile_pic{
+    width: 1.25rem; height: 1.25rem;
+}
+@media (max-width:768px) {
     .name{
         font-size: small;
     }
@@ -56,5 +67,6 @@
     }
     .icons_container .bars{
         display:block;
+        cursor: pointer;
     }
 }

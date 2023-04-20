@@ -1,0 +1,45 @@
+.navbar{
+    padding: 2.5rem 1rem;
+    margin: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #b4deb480;
+    border: solid  #58D43F 1px;
+    border-radius: 0.5rem;
+    width: 15%;
+    min-width: fit-content;
+    
+}
+.nav_item{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    min-width: 100px;
+    padding: 0.7rem;
+   
+    align-items: center;
+    font-size: 1rem;
+    font-style: italic;
+    color: rgb(39, 36, 36);
+}
+.nav_icons{
+    font-size: 1.5rem;
+    color: green;
+}
+/*hover*/
+
+.nav_item:hover{
+    cursor: pointer;
+    background-color:#24B54D ;
+    color: white;
+}
+
+/* media queries */
+@media ( max-width : 767px) {
+    .navbar{
+        display: none;
+    }
+}

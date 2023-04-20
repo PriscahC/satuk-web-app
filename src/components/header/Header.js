@@ -1,12 +1,13 @@
-import React from 'react'
+
 import './header.css'
 import { TbBellRinging2Filled } from 'react-icons/tb'
 import {MdMessage} from "react-icons/md"
 import {FaBars} from "react-icons/fa"
 
 
+
 const Header = () => {
-  return (
+  return ( 
     <div className='container'>
         <div className="logo">
             <span className="title">
@@ -20,6 +21,7 @@ const Header = () => {
             <FaBars className='icons  bars'/>
             <TbBellRinging2Filled className='icons'/>
             <MdMessage className='icons'/>
+            <img src="/home/muturi/desktop/satuk_app/public/pictures/pexels-godisable-jacob-718978.jpg" alt="profile" className='profile_pic' />
         </div>
     </div>
   )
