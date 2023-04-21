@@ -1,6 +1,10 @@
+
+.nav_container.open{
+    transform: 100% , 0%;
+}
 .navbar{
     padding: 2.5rem 1rem;
-    margin: 0.3rem;
+    margin: 0.2rem 0.2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -9,6 +13,7 @@
     border-radius: 0.5rem;
     width: 15%;
     min-width: fit-content;
+    transform: translate(40% 10%);
     
 }
 .nav_item{
@@ -21,7 +26,7 @@
     padding: 0.7rem;
    
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-style: italic;
     color: rgb(39, 36, 36);
 }
@@ -37,9 +42,13 @@
     color: white;
 }
 
-/* media queries */
+/*media queries */
 @media ( max-width : 767px) {
-    .navbar{
-        display: none;
+    .nav_container{
+        background-color: #434d4384 ;
+        margin:0.15rem 0.1rem;
+        padding: 0.2rem 0;
+        border-radius: 0.3rem;
+        transform:translate(-102%, 0%)
     }
 }

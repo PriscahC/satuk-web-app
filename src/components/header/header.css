@@ -2,15 +2,16 @@
 
 .container{
     padding: 0.5rem;
-    margin: 0.2rem;
+    margin: 0 0.1rem ;
+    position: sticky;top:0;
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
-    align-items: center;
+    align-items: last baseline;
     justify-content: space-between;
     background-color: #E1EBDF;
     border: solid #58D43F  1px;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
 
 }
 .logo{
@@ -23,16 +24,17 @@
   color: #008000;
   font-weight: bold;
   font-style: italic;
-  font-size: large;
+  font-size: larger;
 }
 .name{
- font-size: small;
+ font-size: 1.25rem;
  font-style: italic;
  color: #235631;
 }
 .icons_container{
     display: flex;
     gap: 0.8rem;
+    justify-content: last baseline;
    
 }
 .icons_container .icons{
@@ -64,6 +66,7 @@
         flex-direction: column;
         gap: 0;
         align-items: flex-start;
+        
     }
     .icons_container .bars{
         display:block;
