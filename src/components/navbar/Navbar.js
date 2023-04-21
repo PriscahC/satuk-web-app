@@ -8,9 +8,9 @@ import {BsSuitClub} from "react-icons/bs";
 
 
 
-const Navbar = () => {
+function Navbar(props) {
   return (
-    <div className="nav_container">
+    <div className={props.isOpen ? "nav_container open" : "nav_container" }>
         <div className="navbar">
             <div className="nav_item">
                 <VscHome className='nav_icons'/>
