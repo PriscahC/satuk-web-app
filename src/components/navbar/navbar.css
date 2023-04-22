@@ -39,17 +39,19 @@
 }
 
 /*media queries */
-@media ( max-width : 767px) {
+@media ( max-width : 768px) {
     .nav_container{
         background-color: #434d4384 ;
         margin:0.15rem 0.1rem;
         padding: 0.2rem 0;
         border-radius: 0.3rem;
-        transform:translate(-102%, 0%);
-        display:none;
+        transform:translate( -100% 0%);
+        display: NONE;
+       
     }
     .nav_container.open{
-        transform: 100% , 0%;
-        display:block;
+        transform:translate(0%) scale(1);
+        transition: all ease 3sec;
+        display: block;
     }
 }

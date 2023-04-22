@@ -10,7 +10,7 @@ import {BsSuitClub} from "react-icons/bs";
 
 function Navbar(props) {
   return (
-    <div className={props.isOpen ? "nav_container open" : "nav_container" }>
+    <div className={`nav_container ${props.isOpen? 'open' : ''}`}>
         <div className="navbar">
             <div className="nav_item">
                 <VscHome className='nav_icons'/>
@@ -45,5 +45,4 @@ function Navbar(props) {
     </div>    
   )
 }
-
 export default Navbar
