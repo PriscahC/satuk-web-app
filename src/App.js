@@ -1,16 +1,19 @@
-import React, { Children } from 'react'
+import React from 'react'
+import "./App.css"
 import Header from './components/header/Header'
-import { RouterProvider, } from 'react-router'
+import { Outlet, RouterProvider, } from 'react-router'
 import Navbar from './components/navbar/Navbar'
 import { useState } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Home from './pages/home page/Home';
 import Clubs from './pages/clubs _page/Clubs';
 import Schools from './pages/schools_page/Schools';
-import Tuk_soko from './pages/tuk soko/Tuk_soko';
+import TukSoko from './pages/tuk soko/TukSoko';
 import Leaders from './pages/leadership_page/schools_page/Leaders';
 import Gallery from './pages/gallery/Gallery';
 import Sports from './pages/sports/Sports';
+
+
 
 
 function App() {
@@ -24,7 +27,10 @@ function App() {
       return (
         <>
           <Header openfun={openHandler}/>
-          <Navbar isOpen={!openNav}/>
+          <div className="app_container">
+            <Navbar isOpen={!openNav}/>
+            <Outlet />
+          </div>
         </>
       )
     }
@@ -32,31 +38,31 @@ function App() {
     const Router = createBrowserRouter([
       {
         path : "/",
-        element : <layout />,
+        element : <Layout />,
         children : [
           {
             path : "/home",
-            element : <Home/>
+            element : <Home />
           },
           {
             path : "/clubs",
-            element : <Clubs/>
+            element : <Clubs />
           },
           {
             path : "/schools",
-            element : <Schools/>
+            element : <Schools />
           },
           {
-            path : "/tuk soko",
-            element : <Tuk_soko/>
+            path : "/tuk_soko",
+            element : <TukSoko />
           },
           {
-            path : "/satuk leadership",
-            element : <Leaders/>
+            path : "/leadership",
+            element : <Leaders />
           },
           {
             path : "/gallery",
-            element : <Gallery/>
+            element : <Gallery />
           },
           {
             path : "/sports",
@@ -65,7 +71,7 @@ function App() {
         ]
       }
     ]);
-    
+
   return (
     <div className='app'>
       <RouterProvider router={Router}/>

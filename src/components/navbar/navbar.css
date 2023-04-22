@@ -45,9 +45,9 @@
         margin:0.15rem 0.1rem;
         padding: 0.2rem 0;
         border-radius: 0.3rem;
-        transform:translate( -100% 0%);
-        display: NONE;
-       
+        position:absolute;
+        top:3.7rem;
+        width: 100%;
     }
     .nav_container.open{
         transform:translate(0%) scale(1);
