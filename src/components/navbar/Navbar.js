@@ -43,7 +43,7 @@ function Navbar(props) {
                 <span>gallery</span>
             </Link>
         </div>
-    </div>    
+    </div>   
   )
 }
 export default Navbar

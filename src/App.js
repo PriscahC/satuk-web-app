@@ -20,21 +20,19 @@ function App() {
 
   const [openNav, setOpenNav] = useState(false);
     const openHandler= ()=>{
-        setOpenNav(true)
+        setOpenNav(!openNav)
     };
-
     const Layout = () => {
       return (
         <>
           <Header openfun={openHandler}/>
           <div className="app_container">
-            <Navbar isOpen={!openNav}/>
+            <Navbar isOpen={openNav}/>
             <Outlet />
           </div>
         </>
       )
     }
-    
     const Router = createBrowserRouter([
       {
         path : "/",

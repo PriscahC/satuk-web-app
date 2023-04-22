@@ -1,15 +1,17 @@
 .navbar{
     padding: 2.5rem 1rem;
-    margin: 0.2rem 0.2rem;
+    margin: 0.1rem 0.1rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    background-color: #b4deb480;
-    border: solid  #58D43F 1px;
-    border-radius: 0.5rem;
+    background-color: #b4deb4a1;
+    border: solid  #58D43F 1.2px;
+    border-radius: 0.3rem;
     width: 15%;
     min-width: fit-content;
-    transform: translate(40% 10%);
+    animation-name: navAnimation;
+    animation-duration: 0.5s;
+    
     
 }
 .nav_item{
@@ -43,15 +45,27 @@
     .nav_container{
         background-color: #434d4384 ;
         margin:0.15rem 0.1rem;
-        padding: 0.2rem 0;
+        padding: 0.1rem 0;
         border-radius: 0.3rem;
         position:absolute;
-        top:3.7rem;
+        top:3.75rem;
         width: 100%;
+        display: none;  
     }
     .nav_container.open{
-        transform:translate(0%) scale(1);
-        transition: all ease 3sec;
         display: block;
+    }
+  
+}
+
+@keyframes navAnimation {
+    from{
+        opacity:0;
+        transform: translate(-10% , 0%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0%);
+        transition: opacity 300ms , transform 1s;
     }
 }

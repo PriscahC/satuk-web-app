@@ -4,7 +4,6 @@ import {MdMessage} from "react-icons/md"
 import {FaBars} from "react-icons/fa"
 
 const Header = (props) => {
-   
   return ( 
     <div className='container'>
         <div className="logo">
@@ -16,7 +15,7 @@ const Header = (props) => {
             </span>
         </div>
         <div className="icons_container">
-            <FaBars className='icons  bars'id='bar' onClick={()=>props.openfun}/>
+            <FaBars className='icons  bars'id='bar' onClick={props.openfun}/>
             <TbBellRinging2Filled className='icons'/>
             <MdMessage className='icons'/>
         </div>
