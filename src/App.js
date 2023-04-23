@@ -18,29 +18,36 @@ import Sports from './pages/sports/Sports';
 
 
 function App() {
-
-  const [open, setOpen] = useState(false);
-    const openHandler = ()=>{
-        setOpen(!open)
+//hook state for nav openinig and close
+  const [openNav, setOpenNav] = useState(false);
+    const OpenNavHandler = ()=>{
+        setOpenNav(!openNav)
     };
-
-    const closeHandler = ()=>{
-      setOpen(false)
+    const CloseNavHandler = ()=>{
+      setOpenNav(false)
     }
-
+//hook state for form opening and close
+  const[openform ,setOpenform] = useState(false);
+      const OpenformHandler = ()=>{
+        setOpenform(!openform)
+      };
+      const CloseformHandler = ()=>{
+        setOpenform(false)
+      };
+// layout 
     const Layout = () => {
       return (
         <>
-          <Header openfun={openHandler} isactive={open} />
+          <Header openNavfun={OpenNavHandler}  openformfun={OpenformHandler} isactive={openNav} />
           <div className="app_container">
-            <Navbar isOpen={open} closefun={closeHandler}/>
-            <Login />
+            <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
+            <Login  isOpen={openform} closefun={CloseformHandler}/>
             <Outlet />
           </div>
         </>
       )
     }
-
+//router
     const Router = createBrowserRouter([
       {
         path : "/",

@@ -20,7 +20,7 @@ const Header = (props) => {
                 </span>
             </div>
             <div className="icons_container">
-                <FaBars className={`icons  bars ${props.isactive ? "active" : ""}`}id='bar' onClick={props.openfun} />
+                <FaBars className={`icons  bars ${props.isactive ? "active" : ""}`}id='bar' onClick={props.openNavfun} />
                 <TbBellRinging2Filled className='icons'/>
                 <MdMessage className='icons'/>
                 <BsPersonFill className={`icons  ${ProfilePop? "active" : ""}`}id='profile' onClick={()=>setProfilePop(!ProfilePop)} />
@@ -28,9 +28,9 @@ const Header = (props) => {
            
         </div>
         {ProfilePop && <div className="profile_popup">
-            <div className="login"> student login</div>
-            <div className="admin">admin login</div>
-            <Link> profile update</Link>
+            <div className="pop_items" onClick={props.openformfun}> student login </div>
+            <div className="pop_items" onClick={props.openformfun} >admin login</div>
+            <Link className="pop_items">  profile update</Link>
         </div>}
     </>
    

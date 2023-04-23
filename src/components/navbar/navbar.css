@@ -9,7 +9,7 @@
     width: 20%;
     min-width: fit-content;
     animation-name: navAnimation;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     
     
 }
@@ -30,7 +30,7 @@
 .nav_icons{
     font-size: 1.5rem;
     color: #24B54D;
-    cursor:pointer;
+    
 }
 /*hover*/
 
