@@ -14,9 +14,6 @@ import Leaders from './pages/leadership_page/schools_page/Leaders';
 import Gallery from './pages/gallery/Gallery';
 import Sports from './pages/sports/Sports';
 
-
-
-
 function App() {
 //hook state for nav openinig and close
   const [openNav, setOpenNav] = useState(false);
@@ -39,9 +36,9 @@ function App() {
       return (
         <>
           <Header openNavfun={OpenNavHandler}  openformfun={OpenformHandler} isactive={openNav} />
+          <Login  isOpen={openform} closefun={CloseformHandler}/>
           <div className="app_container">
             <Navbar isOpen={openNav} closefun={CloseNavHandler}/>
-            <Login  isOpen={openform} closefun={CloseformHandler}/>
             <Outlet />
           </div>
         </>

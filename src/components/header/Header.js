@@ -1,8 +1,11 @@
 import './header.css'
+//imports for icons
 import { TbBellRinging2Filled } from 'react-icons/tb'
 import {MdMessage} from "react-icons/md"
 import {FaBars} from "react-icons/fa"
 import {BsPersonFill} from "react-icons/bs";
+
+//link router & state
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 

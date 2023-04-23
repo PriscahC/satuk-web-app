@@ -1,11 +1,12 @@
 import "./navbar.css";
+// imports for icons
 import {VscHome} from 'react-icons/vsc';
 import {MdOutlineSchool , MdSportsTennis , MdOutlineShoppingBasket}from "react-icons/md";
 import {IoPeopleCircleOutline}from "react-icons/io5";
 import {GrGallery} from "react-icons/gr";
 import {BsSuitClub} from "react-icons/bs";
+//link router
 import { Link } from 'react-router-dom';
-
 
 function Navbar(props) {
   return (
