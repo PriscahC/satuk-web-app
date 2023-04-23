@@ -2,25 +2,38 @@ import './header.css'
 import { TbBellRinging2Filled } from 'react-icons/tb'
 import {MdMessage} from "react-icons/md"
 import {FaBars} from "react-icons/fa"
+import {BsPersonFill} from "react-icons/bs";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Header = (props) => {
+    const [ProfilePop, setProfilePop] = useState(false)
   return ( 
-    <div className='container'>
-        <div className="logo">
-            <h3 className="title">
-                SATUK
-            </h3>
-            <span className="name">
-                student association of TUK
-            </span>
+    <>
+        <div className='container'>
+            <div className="logo">
+                <span className="title">
+                    SATUK
+                </span>
+                <span className="name">
+                    student association of TUK
+                </span>
+            </div>
+            <div className="icons_container">
+                <FaBars className={`icons  bars ${props.isactive ? "active" : ""}`}id='bar' onClick={props.openfun} />
+                <TbBellRinging2Filled className='icons'/>
+                <MdMessage className='icons'/>
+                <BsPersonFill className={`icons  ${ProfilePop? "active" : ""}`}id='profile' onClick={()=>setProfilePop(!ProfilePop)} />
+            </div>
+           
         </div>
-        <div className="icons_container">
-            <FaBars className='icons  bars'id='bar' onClick={props.openfun}/>
-            <TbBellRinging2Filled className='icons'/>
-            <MdMessage className='icons'/>
-        </div>
-    </div>
-       
+        {ProfilePop && <div className="profile_popup">
+            <div className="login"> student login</div>
+            <div className="admin">admin login</div>
+            <Link> profile update</Link>
+        </div>}
+    </>
+   
     
   
   )

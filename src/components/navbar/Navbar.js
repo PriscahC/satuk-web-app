@@ -1,4 +1,3 @@
-import React from 'react';
 import "./navbar.css";
 import {VscHome} from 'react-icons/vsc';
 import {MdOutlineSchool , MdSportsTennis , MdOutlineShoppingBasket}from "react-icons/md";
@@ -8,10 +7,9 @@ import {BsSuitClub} from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
 
-
 function Navbar(props) {
   return (
-    <div className={`nav_container ${props.isOpen? 'open' : ''}`}>
+    <div className={`nav_container ${(props.isOpen)? 'open' : ''}`} onClick={props.closefun} >
         <div className="navbar">
             <Link to= "home" className="nav_item">
                 <VscHome className='nav_icons'/>

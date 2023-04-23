@@ -1,6 +1,7 @@
 import React from 'react'
 import "./App.css"
 import Header from './components/header/Header'
+import  Login from './components/login_form/Login'
 import { Outlet, RouterProvider, } from 'react-router'
 import Navbar from './components/navbar/Navbar'
 import { useState } from 'react';
@@ -18,21 +19,28 @@ import Sports from './pages/sports/Sports';
 
 function App() {
 
-  const [openNav, setOpenNav] = useState(false);
-    const openHandler= ()=>{
-        setOpenNav(!openNav)
+  const [open, setOpen] = useState(false);
+    const openHandler = ()=>{
+        setOpen(!open)
     };
+
+    const closeHandler = ()=>{
+      setOpen(false)
+    }
+
     const Layout = () => {
       return (
         <>
-          <Header openfun={openHandler}/>
+          <Header openfun={openHandler} isactive={open} />
           <div className="app_container">
-            <Navbar isOpen={openNav}/>
+            <Navbar isOpen={open} closefun={closeHandler}/>
+            <Login />
             <Outlet />
           </div>
         </>
       )
     }
+
     const Router = createBrowserRouter([
       {
         path : "/",
