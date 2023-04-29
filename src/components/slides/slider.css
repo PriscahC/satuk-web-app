@@ -1,0 +1,9 @@
+.Slick-slider{
+    width: 80%;
+    margin: 0 auto;
+    height: 400px;
+}
+.Slick-prev{
+    color: green;
+    left: 20px;
+}
