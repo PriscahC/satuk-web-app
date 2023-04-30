@@ -1,9 +1,14 @@
-.Slick-slider{
-    width: 80%;
-    margin: 0 auto;
-    height: 400px;
+.wrapper{
+    display: flex;
+    padding: 10px;
+    background-color: greenyellow;
+
 }
-.Slick-prev{
-    color: green;
-    left: 20px;
+.slides{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: rgb(188, 188, 254);
+    color:white;
+
 }
